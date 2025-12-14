@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'idroid';
+  src: url('font/idroid.otf') format(opentype);
+  font-weight: normal;
+  font-style: normal;}
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    
+
+  
+
+body{
+  background-color: aquamarine;
+  font-family: 'Bebas', Helvetica, sans-serif;
+
+}
+
+header{
+  background-image: linear-gradient(to top, green, green);
+}
+header > h1{
+  text-align: center;
+}
+
+header>p{
+text-align:center;
+}
+
+.idroid {
+  font-family: 'idroid', Helvetica, sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin: 15px;
+}

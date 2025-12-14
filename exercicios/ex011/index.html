@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mídia em HTML5</title>
+</head>
+<body>
+  <h1>Imagem dimânica</h1>
+  <p>Tente abrir esse site em vários despositivo deferentes ou simolesmente aumente e diminua o tamanho do seu navegador.</p>
+  <picture>
+    <source media="(max-width:750px )" srcset="img/p.png" type="image/png">
+    <source media="(max-width:1050px )" srcset="img/m.png" type="image/png">
+    <img src="img/g.png " alt="imagem felexível">
+  </picture>
+<h1>Reproduzir audio</h1>
+<p>Vamos aprender a reproduzir áudio em HTML5</p>
+<audio src="../midia/audio/Decay Tower - roljui.mp3" controls ></audio>
+
+<audio preload="metadata" controls autopla loop > 
+  <source src="../midia/audio/Decay Tower - roljui.mp3" type="audio/mpeg">
+  <source src="../midia/audio/Decay Tower - roljui.ogg" type="audio/ogg">
+  <!--<source src="../midia/audio/Decay Tower - roljui.wav" type="audio/wav"> evitar usar -->
+  <p>Infeliz mente seu navegador não consegue reproduzir o audio. <a href="../midia/audio/Decay Tower - roljui.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+</audio>
+
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+  font-family: 'Android';
+  src: url('../font/idroiid.otf') format('opentype');
+  font-weight: normal;
+}
+/*
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+:root{
+    --cor0:#ebe5c5;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866; 
+    --cor4:#1a5c37; 
+    --cor5:#063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+
+    --fonte-destaque: 'Bebas Neue',
+      sans-serif;
+      --fonte-android: 'Android', 'Bebas Neue';
+}
+
+
+
+body{
+  background-color:var(--cor0);
+  font-family:var(--fonte-padrao) ;
+}
+
+/* todos os a com class (externos) ( o ::after- quer dizer que a modificaçao serra feita depois do conteudo a)*/
+a.externo::after{
+content:'\00A0\1F517';
+}
+
+
+header {
+  background-image: linear-gradient(to bottom, var(--cor3,), var(--cor5,));
+  min-height: 150px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+header > h1{
+  color: white;
+  font-family: var(--fonte-destaque);
+  font-size: 3em;
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.486);
+}
+
+header > p{
+  font-family: var(--fonte-padrao);
+  font-size: 1.2em;
+  color: white;
+  max-width: 600px;
+  padding: 0px 10px;
+  margin-bottom: 20px;
+  margin: auto;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.486);
+}
+
+nav{
+  background-color: var(--cor5);
+  padding: 10px;
+  box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.525);
+}
+
+nav > a{
+  color: var(--cor1);
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+
+nav > a:hover{
+  background-color: var(--cor3);
+  color: var(--cor5);
+  border-radius: 5px;
+}
+
+main{
+  min-height: 300px;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 30px;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.539);
+}
+
+main h1{
+  color: var(--cor5);
+  font-family: var(--fonte-android) ;
+  font-weight: normal;
+  font-size: 1.8em;
+}
+
+main h2{
+  font-family: var(--fonte-android);
+  color: var(--cor4);
+  font-size: 1.3em;
+  font-weight: normal;
+  background-image: linear-gradient(to right, var(--cor1),
+  transparent);
+  text-indent: 8px;
+}
+/* Aqui usamos o main p,  porque no inicio zeramos as propriadades do googel com o *{}. Ao zera o global a propriadade P perdeu suas configurações e ficou muito junto e sem margem*/
+main p {
+  margin: 15px 0px;
+  text-align: justify;
+  /* texte-indent- afasta a primeira linha de um paragrafo*/
+  text-indent: 30px;
+  font-size: 1em;
+  /* line-height- da um espasamento entre cada linha*/
+  line-height: 2em;
+}
+
+main strong{
+  color: var(--cor4);
+  /* font-weight: bolder; - é o peso da fonte escolhida*/
+  font-weight: bolder;
+}
+
+main a{
+  text-decoration: none;
+  color: var(--cor5);
+  font-weight: bold;
+  background-color: var(--cor1);
+  padding: 2px 6px;
+}
+
+main a:hover{
+  text-decoration: underline;
+  color: var(--cor4);
+}
+
+main img{
+  /* width: 100% - a imagem vai ocupar 100% da caixa*/
+  width: 100%;
+}
+
+main img.bugdroid{
+  /* max-width: 350px - a imagem encolhe no maximo até 350px*/
+  max-width: 350px;
+  /* display: block - Ele ocupa toda a largura disponível (mesmo que seu conteúdo não ocupe).*/
+  display: block;
+  /* margin: auto - para cetrelizar. Ele vai ocopar a mesma lagura de cada lado*/
+  margin: auto;
+}
+
+div.video{
+  background-color: var(--cor5);
+  margin:0px -20px 30px -20px;
+  padding: 20px;
+  padding-bottom: 56.5%;
+
+  position: relative;
+}
+
+div.video > iframe{
+  position: absolute;
+  top: 5%;  
+  left: 5%;
+  width:90% ;
+  height:90% ;
+}
+
+aside{
+  background-color: var(--cor1);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.469);
+}
+
+aside > h3{
+  background-color: var(--cor4);
+  color: white;
+  padding: 10px;
+  margin: -10px -10px 0px -10px ;
+  border-radius: 10px 10px 0px 0px;
+
+}
+
+aside > ul{
+
+  /*list-style-type: '\2714\00A0'- o 2714 é um emoji a qual acrecentamos um \ para aprecer na tela. O 00A0 é o nibsp é um espaço sem quebra*/ 
+  list-style-type: '\2714\00A0\00A0';
+
+  /* list-style-position:- refere-se as bolinhas ao caracteres que fical na frente da lista*/
+  list-style-position: inside;
+  columns: 2;
+}
+
+footer{
+  background-color: var(--cor5);
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 5px;
+}
+
+/* footer > p > a - este caminha diz ( no fotter tem o p e no p tem os a - entao eu apenas vou editar os (a) que estão dentro da box fotter e dentro dos (p)*/
+footer > p > a{
+color: white;
+font-weight: bolder;
+text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;
+  color: var(--cor1);
+}
